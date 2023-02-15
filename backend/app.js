@@ -23,10 +23,9 @@ const cors=require('cors')
 
 const { urlencoded } = require('express');
 
-app.listen(8000);
-app.get('/', (req,res)=>{
-    console.log("Server started successfully");
-    res.send("Server started successfully!!");
+const PORT = process.env.PORT || 8000
+app.listen(PORT,()=>{
+    console.log('server is runing');
 })
 
 app.use(urlencoded())
